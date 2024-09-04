@@ -35,7 +35,7 @@ const Header = () => {
                     />
                     <h1 className="text-xl font-bold">Blog To</h1>
                 </div>
-                <div className="flex items-center space-x-4 md:hidden">
+                <div className="md:hidden">
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="text-white focus:outline-none"
@@ -52,12 +52,12 @@ const Header = () => {
                                 strokeLinejoin="round"
                                 strokeWidth="2"
                                 d={isMobileMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
-                            ></path>
+                            />
                         </svg>
                     </button>
                 </div>
-                <nav className={`fixed inset-0 bg-gray-900 bg-opacity-75 z-50 md:static md:flex md:space-x-6 md:bg-transparent md:bg-none md:items-center transition-transform transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                    <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 md:ml-4 md:mt-0">
+                <nav className={`md:flex md:items-center md:space-x-6 ${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
+                    <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                         <li onClick={goToHome} className="cursor-pointer">
                             <a
                                 href="#home"
