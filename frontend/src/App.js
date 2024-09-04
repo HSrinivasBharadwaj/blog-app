@@ -8,6 +8,7 @@ import {Routes, Route} from "react-router-dom";
 import CreateBlog from './components/CreateBlog';
 import IndividualBlog from './components/IndividualBlog';
 import UpdateBlog from './components/UpdateBlog';
+import About from './components/About';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/createblog' element={<CreateBlog />}/>
         <Route path='/blog/:id' element={<IndividualBlog />}/>
         <Route path='/update/:id' element={<UpdateBlog />}/>
+        <Route path='/about' element={<About />}/>
       </Routes>
     </div>
   );

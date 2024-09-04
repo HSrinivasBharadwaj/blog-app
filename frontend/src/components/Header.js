@@ -9,6 +9,12 @@ const Header = () => {
         sessionStorage.removeItem("token");
         navigate("/")
     }
+    const goToAboutPage = () => {
+        navigate("/about")
+    }
+    const goToHome = () => {
+        navigate("/home")
+    }
     return (
         <header className="bg-gray-900 text-white py-4">
             <div className="container mx-auto flex justify-between items-center px-4">
@@ -22,7 +28,7 @@ const Header = () => {
                 </div>
                 <nav>
                     <ul className="flex space-x-6">
-                        <li>
+                        <li onClick={goToHome}>
                             <a
                                 href="#home"
                                 className="hover:text-blue-400 transition-colors"
@@ -30,7 +36,7 @@ const Header = () => {
                                 Home
                             </a>
                         </li>
-                        <li>
+                        <li onClick={goToAboutPage}>
                             <a
                                 href="#about"
                                 className="hover:text-blue-400 transition-colors"
