@@ -53,14 +53,14 @@ const IndividualBlog = () => {
 
 
 
-            <div className="flex justify-between items-center mt-8">
+            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between items-center mt-8">
                 <button
                     onClick={goToHomePage}
                     className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition duration-300"
                 >
                     Back to Blogs
                 </button>
-                <div className="space-x-4">
+                <div className="space-x-4 mt-4 md:mt-0 lg:mt-0 xl:mt-0">
                     <button
                         onClick={() => deleteBlog(blogId)}
                         className="px-6 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-500 transition duration-300"

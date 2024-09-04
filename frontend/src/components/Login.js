@@ -17,8 +17,8 @@ const Login = () => {
                 email,
                 password
             })
-            //Setting up the token in local storage
-            sessionStorage.setItem("token", response.data.token)
+            sessionStorage.setItem("token", response.data.token);
+            sessionStorage.setItem("name",response.data.existingUser.name)
             navigate("/home")
         } catch (error) {
             if (error.response.data.message) {

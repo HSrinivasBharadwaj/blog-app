@@ -3,9 +3,11 @@ import axios from 'axios';
 import useFetchCategories from '../utils/useFetchCategories';
 import useFetchIndividualBlog from '../utils/useFetchIndividualBlog';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const UpdateBlog = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const { name: fetchedName, title: fetchedTitle, content: fetchedContent, image: fetchedImage, category: fetchedCategory } = useFetchIndividualBlog(id);
     const [name, setName] = useState("");
     const [title, setTitle] = useState("");
@@ -55,6 +57,7 @@ const UpdateBlog = () => {
                     'Content-Type': "multipart/form-data"
                 }
             });
+            navigate("/home")
         } catch (error) {
             console.log(error);
         }
